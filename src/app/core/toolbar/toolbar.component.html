@@ -1,0 +1,47 @@
+<div class="container top-welcome" fxLayout fxLayout.xs="column" fxLayoutAlign="left" fxLayoutGap="0px" fxLayoutGap.xs="0">
+    <span class="item welcome-label"> <span class="left-text"> Welcome </span>Associate</span>
+    <span class="item welcome-label"> <span class="left-text"> Store# </span>6575</span>
+    <span class="item welcome-label"> <span class="left-text"> Location </span>Austin, Texas</span>
+    <span class="item welcome-label" style="position:absolute;right:10px;"> <span class="left-text"> Weather </span>Sunny, 87</span>
+</div>
+<div class="main-toolbar mat-elevation-z2">
+  <div fxLayout="row" fxLayoutAlign="start center" fxHide="false" fxHide.gt-sm>
+    <button (click)="sidenav.open()" md-icon-button>
+      <md-icon>menu</md-icon>
+    </button>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center" fxFlex="30px" fxHide fxShow.gt-md>
+      <img src="../../../../assets/img/logo.png" alt="" style="height:25px;">
+    </div>
+  <div fxLayout="row" fxLayoutAlign="start center" fxFlex="400px" fxHide fxShow.gt-md>   
+    <span class="app-label"><small class="app-label small">my</small>StoreHealth</span>
+    <i class="fa fa-2x fa-heartbeat" aria-hidden="true" style="color: #676767;"></i>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center" fxFlex="500px" fxHide fxShow.gt-md>
+    <ms-search-bar></ms-search-bar>
+  </div>
+
+  <ms-breadcrumbs *ngIf="showBreadcrumbs" [fxHide]="true" [fxHide.gt-sm]="false"></ms-breadcrumbs>
+
+  <span fxFlex></span>
+
+
+  <!-- <div class="">
+    <ms-toolbar-notifications></ms-toolbar-notifications>
+  </div> -->
+  <button md-button class="fullscreen-toggle">
+    <md-icon>home</md-icon>
+    <div style="line-height: 1;font-size: 10px;">Home</div>
+  </button>
+  <button md-button class="fullscreen-toggle">
+    <md-icon >feedback</md-icon>
+    <div style="line-height: 1;font-size: 10px;">Feedback</div>
+  </button>
+  <button md-button class="fullscreen-toggle">
+    <i class="fa fa-globe icon-button" aria-hidden="true"></i>
+    <div style="line-height: 1;font-size: 10px;">Region</div>
+  </button>
+  <div class="user-button-container">
+    <ms-toolbar-user-button></ms-toolbar-user-button>    
+  </div>
+</div>

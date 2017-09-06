@@ -1,0 +1,33 @@
+@import "../../../styles/var";
+
+:host {
+  z-index: $z-index__main-toolbar;
+}
+
+.icon-button{
+  font-size: 20px;
+}
+.top-welcome{
+  height: 37px;
+  background: #000000;
+}
+.welcome-label{
+      color: #ffffff;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: left;
+      text-indent: 50px;
+}
+.welcome-label .left-text{
+  color: #999999;
+}
+
+.app-label{
+  font-family: 'SFNSDisplay';
+  font-size: 24px;
+  color: #F96301;
+  line-height: 18px;
+}
+.app-label small{
+  color:#ffffff;
+}

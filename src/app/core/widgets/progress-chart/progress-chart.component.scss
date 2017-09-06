@@ -1,0 +1,41 @@
+
+.chart-container{
+  width: 65%;
+  margin: auto;
+}
+.progress-wrapper {
+  position: relative;
+  margin: 20px auto;
+  font-size: 40px;
+}
+
+.current {
+  position: absolute;
+  color: #333333;
+  font-weight: normal;
+  line-height: 1;
+  font-size: 30px;
+}
+.current small{
+  position: absolute;
+  color: #bbb;
+  font-weight: normal;
+  line-height: 1;
+  font-size: 12px;
+  width: 100px;
+}
+
+round-progress {
+  margin: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 350px;
+  margin: 40px auto 80px;
+  text-align: center;
+  padding: 40px;
+  background: #fff;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+}

@@ -1,0 +1,43 @@
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="right" fxLayoutGap.xs="0">
+  <div class="item" fxFlex="70%" fxFlexOffset="0px" fxFlexOffset.xs="0">
+    <ms-notifications></ms-notifications>
+  </div>
+  <div class="issue-box" fxFlex>
+      <md-card style="color:#F96302; text-align:center;padding: 10px;">
+        <h5 style="margin:0;">Issues</h5>
+        <span>20</span></md-card>
+    </div>
+    <div class="issue-box" fxFlex>
+      <md-card style="color:#F96302; text-align:center;padding: 10px;">
+        <h5 style="margin:0;">Tickets Open</h5>
+        <span>20</span></md-card>
+    </div>
+</div>
+<div class="dashboard-container" fxLayout="column" fxLayoutAlign="start stretch">
+  <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="left" fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <div class="item" fxFlex="60%" fxFlexOffset="0px" fxFlexOffset.xs="0">
+      <div class="margin-top" fxLayout="row" fxLayoutAlign="left stretch" fxLayoutWrap="wrap">
+        <div class="margin-bottom-sm" fxLayout="column" fxFlex="33.3%">
+          <ms-overall-store-health></ms-overall-store-health>
+        </div>
+        <div class="margin-bottom-sm" fxLayout="column" fxFlex="32.3%" fxFlexOffset.gt-sm="1%">
+          <ms-upcoming-deployments></ms-upcoming-deployments>
+        </div>
+        <div class="margin-bottom-sm" fxLayout="column" fxFlex="32.3%" fxFlexOffset.gt-sm="1%">
+          <ms-infrastructure-health></ms-infrastructure-health>
+        </div>
+ 
+
+        <div class="margin-bottom-sm" fxLayout="column" fxFlex="33.3%">
+            <ms-registers></ms-registers>
+          </div>
+          <div class="margin-bottom-sm" fxLayout="column" fxFlex="32.3%" fxFlexOffset.gt-sm="1%">
+            <ms-assisted-checkout></ms-assisted-checkout>
+          </div>
+          <div class="margin-bottom-sm" fxLayout="column" fxFlex="32.3%" fxFlexOffset.gt-sm="1%">
+            <ms-multi-role-pc></ms-multi-role-pc>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

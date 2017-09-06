@@ -1,0 +1,61 @@
+<div class="dashboard-widget chart-widget mat-elevation-z2" [style.background]="bgColor">
+  <div class="title-container" [style.color]="textColor" fxLayout="row" fxLayoutAlign="start center">
+    <span fxLayout="column" style="margin-right:5px;">
+        <i class="fa fa-th-large" aria-hidden="true"></i>
+     </span>
+    <div fxLayout="column">
+      <span class="title">{{ widgetTitle }}</span>
+    </div>
+    <span fxFlex></span>
+    <button md-icon-button [mdMenuTriggerFor]="options">
+        <md-icon class="icon">settings</md-icon>
+    </button>
+  </div>
+
+  <div class="card" style="height: 33vh; padding:10px;">
+    <perfect-scrollbar class="content">
+        <div class="notification" fxLayout="row" fxLayoutAlign="start center" md-ripple style="border-bottom:2px solid #dcdcdc; padding:10px 0; font-size:14px; font-weight:500;">
+            <div class="title" fxLayout="column" fxFlex="70%">
+              <div class="name">Components <i class="fa fa-sort" aria-hidden="true"></i></div>
+            </div>
+            <span fxLayout="column" fxFlex>Status </span>
+          </div>
+      <div class="notification" fxLayout="row" fxLayoutAlign="start center" md-ripple *ngFor="let item of data.components" style="border-bottom:1px solid #dcdcdc; padding:10px 0;font-size:14px;">
+        <div class="title" fxLayout="column" fxFlex="70%">
+          <div class="name">{{item.name}}</div>
+        </div>
+        <md-icon class="icon" fxLayout="column" style="color:green;" fxFlex>check_circle</md-icon>
+      </div>
+    </perfect-scrollbar>
+  </div>
+  <div class="chart-footer" fxLayout="row">
+    <div class="border-right text-center" fxFlex fxLayout="column">
+      <span class="title">{{data.issues}}</span>
+      <span class="extra">Issues</span>
+    </div>
+    <div class="border-right text-center" fxFlex fxLayout="column">
+      <span class="title">{{data.ticketsOpen}}</span>
+      <span class="extra">Tickets Open</span>
+    </div>
+    <div class="text-center" fxFlex fxLayout="column">
+      <span class="title">{{data.blank}}</span>
+      <span class="extra">Blank</span>
+    </div>
+  </div>
+  <ms-loading-overlay [isLoading]="isLoading"></ms-loading-overlay>
+</div>
+
+<md-menu #options="mdMenu">
+  <button md-menu-item>
+    <md-icon> settings </md-icon>
+    <span> Settings </span>
+  </button>
+  <button md-menu-item disabled>
+    <md-icon> more </md-icon>
+    <span> More Info </span>
+  </button>
+  <button md-menu-item>
+    <md-icon> remove_circle </md-icon>
+    <span> Remove Widget </span>
+  </button>
+</md-menu>

@@ -1,0 +1,33 @@
+<div class="user-button-container" #userButton (msClickOutside)="onClickOutside()">
+  <button class="user-button" md-button (click)="toggleDropdown()" [class.open]="isOpen">
+    <!-- <span fxLayout="row" fxLayoutAlign="start center"> -->
+      <md-icon>account_circle</md-icon>      
+      <div style="line-height: 1;font-size: 10px;">Login</div>
+    <!-- </span> -->
+    
+  </button>
+ 
+  <div class="dropdown mat-elevation-z1" [class.open]="isOpen">
+    <div class="content">
+      <div class="list">
+        <div class="item" fxLayout="row" fxLayoutAlign="start center" md-ripple>
+          <md-icon class="icon">account_circle</md-icon>
+          <span class="title">Profile</span>
+        </div>
+        <div class="item" fxLayout="row" fxLayoutAlign="start center" md-ripple>
+          <md-icon class="icon">settings</md-icon>
+          <span class="title">Settings</span>
+        </div>
+        <div class="item" fxLayout="row" fxLayoutAlign="start center" md-ripple>
+          <md-icon class="icon">help</md-icon>
+          <span class="title">Help</span>
+        </div>
+        <md-divider></md-divider>
+        <div class="item" fxLayout="row" fxLayoutAlign="start center" md-ripple [routerLink]="['/login']">
+          <md-icon class="icon">exit_to_app</md-icon>
+          <span class="title">Logout</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
